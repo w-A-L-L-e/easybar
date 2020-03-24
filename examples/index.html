@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Easybar examples">
+    <meta name="author" content="Mark Truran">
+
+    <link rel="stylesheet" type="text/css" href="../dist/css/easybar.min.css">
+    <link rel="stylesheet" type="text/css" href="css/examples.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/prism.css" rel="stylesheet" />
+
+    <title>easybar examples</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Static navbar -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">easybar</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#">Basic</a>
+                        </li>
+                        <li>
+                            <a href="#">Advanced</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <h1>easybar</h1>
+            <p>A simple to use, vanilla JS, open source progress bar.</p>
+            <p>
+                <a class="btn btn-primary" href="https://github.com/mark-truran/easybar" role="button">Check out the repo &raquo;</a>
+            </p>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">1. The simplest form. Just three parameters. Animation starts on page load. This can be changed.</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="example1" class="easybar-wrapper">
+                            <div class="easybar-background">
+                                <div class="easybar" data-options="example1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <pre><code class="language-css">
+var example1 = {
+    selector: '#example1',
+    value: 3,
+    maxValue: 5
+}
+                    </code></pre>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">2. You can add an image to the end of the bar with just one more parameter.</div>
+            <div class="panel-body">
+
+                <div class="row code-row">
+                    <div class="col-sm-12">
+                        <div id="example2" class="easybar-wrapper">
+                            <div class="easybar-background">
+                                <div class="easybar" data-options="example2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row code-row">
+                    <pre><code class="language-css">
+var example2 = {
+    selector: '#example2',
+    value: 4,
+    maxValue: 5,
+    image: 'img/facebook.png'
+}    
+                            </code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">3. You can trigger the animation using events. Here we use a click event.</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="example3" class="easybar-wrapper">
+                            <div class="easybar-background">
+                                <div class="easybar" data-options="example3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row button-row">
+                    <div class="col-sm-2">
+                        <button id="example3btn" type="button" class="btn btn-default animate-button">Animate</button>
+                    </div>
+                </div>
+
+                <div class="row code-row">
+                    <pre><code class="language-css">
+var example3 = {
+    selector: '#example3',
+    value: 3,
+    maxValue: 5,
+    trigger: 'onClick',
+    triggerSelector:'#example3btn'
+}
+                        </code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">4. Here we are using a mouseover event.</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="example4" class="easybar-wrapper">
+                            <div class="easybar-background">
+                                <div class="easybar" data-options="example4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row button-row">
+                    <div class="col-sm-2">
+                        <button id="example4btn" type="button" class="btn btn-default animate-button">Mouse over me</button>
+                    </div>
+                </div>
+
+                <div class="row code-row">
+                    <pre><code class="language-css">
+var example4 = {
+    selector: '#example4',
+    value: 3,
+    maxValue: 5,
+    trigger: 'onHover',
+    triggerSelector:'#example4btn'
+}
+                        </code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">5. Change the bar colour (default: #3B5998) or the background (default: #f1f1f1)</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="example5" class="easybar-wrapper">
+                            <div class="easybar-background">
+                                <div class="easybar" data-options="example5"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row button-row">
+                    <div class="col-sm-2">
+                        <button id="example5btn" type="button" class="btn btn-default animate-button">Animate</button>
+                    </div>
+                </div>
+
+                <div class="row code-row">
+                    <pre><code class="language-css">
+var example5 = {
+    selector: '#example5',
+    value: 3,
+    maxValue: 5,
+    trigger: 'onClick',
+    triggerSelector:'#example5btn',
+    backgroundColour: '#F0F7D4',
+    barColour: '#66B032'
+}
+                        </code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">6. You can alter the height of the bar.</div>
+            <div class="panel-body">
+
+                <div class="row code-row">
+                    <div class="col-sm-12">
+                        <div id="example6" class="easybar-wrapper">
+                            <div class="easybar-background">
+                                <div class="easybar" data-options="example6"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row button-row">
+                    <div class="col-sm-2">
+                        <button id="example6btn" type="button" class="btn btn-default animate-button">Animate</button>
+                    </div>
+                </div>
+
+                <div class="row code-row">
+                    <pre><code class="language-css">
+var example6 = {
+    selector: '#example6',
+    value: 4,
+    maxValue: 5,
+    image: 'img/facebook.png',
+    height: '4px',
+    trigger: 'onClick',
+    triggerSelector:'#example6btn'
+}    
+                            </code></pre>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading">7. You can use an image background instead of a block colour.</div>
+            <div class="panel-body">
+
+                <div class="row code-row">
+                    <div class="col-sm-12">
+                        <div id="example7" class="easybar-wrapper">
+                            <div class="easybar-background">
+                                <div class="easybar" data-options="example7"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row button-row">
+                    <div class="col-sm-2">
+                        <button id="example7btn" type="button" class="btn btn-default animate-button">Animate</button>
+                    </div>
+                </div>
+
+                <div class="row code-row">
+                    <pre><code class="language-css">
+var example7 = {
+    selector: '#example7',
+    value: 3,
+    maxValue: 5,
+    trigger: 'onClick',
+    triggerSelector:'#example7btn',
+    barimage: 'img/stripes.jpg' 
+} 
+                            </code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">8. You can use an image for the background as well.</div>
+            <div class="panel-body">
+
+                <div class="row code-row">
+                    <div class="col-sm-12">
+                        <div id="example8" class="easybar-wrapper">
+                            <div class="easybar-background">
+                                <div class="easybar" data-options="example8"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row button-row">
+                    <div class="col-sm-2">
+                        <button id="example8btn" type="button" class="btn btn-default animate-button">Animate</button>
+                    </div>
+                </div>
+
+                <div class="row code-row">
+                    <pre><code class="language-css">
+var example8 = {
+    selector: '#example8',
+    value: 3,
+    maxValue: 5,
+    trigger: 'onClick',
+    triggerSelector:'#example8btn',
+    backgroundImage: 'img/stripes_bw.jpg',
+    barImage: 'img/stripes.jpg' 
+}
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">9. Linear and radial gradients are easy. Just tweak the barColour property.</div>
+            <div class="panel-body">
+
+                <div class="row code-row">
+                    <div class="col-sm-12">
+                        <div id="example9" class="easybar-wrapper">
+                            <div class="easybar-background">
+                                <div class="easybar" data-options="example9"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row button-row">
+                    <div class="col-sm-2">
+                        <button id="example9btn" type="button" class="btn btn-default animate-button">Animate</button>
+                    </div>
+                </div>
+
+                <div class="row code-row">
+                    <pre><code class="language-css">
+var example9 = {
+    selector: '#example8',
+    value: 3,
+    maxValue: 5,
+    trigger: 'onClick',
+    triggerSelector:'#example8btn',
+    barColour: 'linear-gradient(to left, green, white)'
+}
+                            </code></pre>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../dist/js/easybar.min.js"></script>
+    <script src="js/options-store.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script>
+
+        populateOptionsStore();
+
+        var elements = document.getElementsByClassName("easybar");
+
+        for (var i = 0; i < elements.length; i++) {
+            var example = elements[i].getAttribute("data-options");
+            var options = getOptionsfromStore(example);
+            if (options !== null) {
+                initialiseEasybar(options);
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+.button-row {
+    margin-top: 15px;
+}
+
+.code-row {
+    margin-top: 15px;
+}
+
+.animate-button {
+    margin-left: 40px;
+}
+
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+
+ .easybar-wrapper {
+    padding-left: 40px !important;
+ }
+
+.panel-body {
+    padding: 30px !important;
+}

@@ -1,0 +1,58 @@
+{
+  "_args": [
+    [
+      "git+https://github.com/mark-truran/easybar.git",
+      "/Users/wschrep/FreelanceWork/VIAA/ldap-ssum"
+    ]
+  ],
+  "_from": "git+https://github.com/mark-truran/easybar.git",
+  "_id": "easybar@git+https://github.com/mark-truran/easybar.git#564fb34772900dddab380762fb1e2617f614e0af",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/easybar",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://github.com/mark-truran/easybar.git",
+    "rawSpec": "git+https://github.com/mark-truran/easybar.git",
+    "saveSpec": "git+https://github.com/mark-truran/easybar.git",
+    "fetchSpec": "https://github.com/mark-truran/easybar.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/mark-truran/easybar.git#564fb34772900dddab380762fb1e2617f614e0af",
+  "_spec": "git+https://github.com/mark-truran/easybar.git",
+  "_where": "/Users/wschrep/FreelanceWork/VIAA/ldap-ssum",
+  "author": {
+    "name": "Mark Truran"
+  },
+  "bugs": {
+    "url": "https://github.com/mark-truran/easybar/issues"
+  },
+  "description": "A simple, vanilla JS progress bar",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-rename": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest"
+  },
+  "homepage": "https://github.com/mark-truran/easybar#readme",
+  "keywords": [
+    "progress",
+    "bar"
+  ],
+  "license": "MIT",
+  "main": "easybar.js",
+  "name": "easybar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mark-truran/easybar.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
